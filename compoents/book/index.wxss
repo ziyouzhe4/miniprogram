@@ -1,0 +1,65 @@
+/* compoents/book/index.wxss */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 240rpx;
+    height: 360rpx;
+    position: relative;
+    margin-top: 30rpx;
+    /* 水平偏移量  垂直偏移量  模糊半径 阴影颜色 */
+    box-shadow: 2px 2px 3px #e3e3e3;
+}
+
+.container image {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rpx;
+}
+
+.description{
+    width: 216rpx;
+    position: absolute;
+    bottom: 0;
+    background-color: #e8eb13;
+    padding: 5rpx 10rpx 8rpx 15rpx;
+    font-size: 24rpx;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 2rpx;
+    border-bottom-left-radius: 2rpx;
+}
+
+.title{
+    margin-top: 10rpx;
+    /* 用于指定当文本内容溢出包含它的元素框时如何显示 ,ellipsis 是该属性的一个取值，它表示用省略号（...）来代替溢出的文本， */
+    text-overflow: ellipsis;
+    /* nowrap 能防止文本换行 */
+    white-space: nowrap;
+    /* hidden 确保溢出容器的文本被隐藏 */
+    overflow: hidden;
+    background-color: aqua;
+}
+
+.author{
+    font-size: 20rpx;
+    color: #999999;
+    margin-bottom: 10rpx;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: rgb(128, 228, 35);
+}
+
+.foot{
+    display: flex;
+    flex-direction: row;
+    font-size: 20rpx;
+    justify-content: flex-end;
+    background-color: rgb(209, 21, 77);
+}
+
+.footer{
+    color: #666666
+}
+

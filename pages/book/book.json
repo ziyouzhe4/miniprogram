@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "p-book": "/compoents/book/index",
+        "p-search": "/compoents/search/index"
+    }
+}

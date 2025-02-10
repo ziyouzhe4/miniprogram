@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "p-tag": "/compoents/tag/index",
+        "p-like": "/compoents/like/index",
+        "p-mask": "/compoents/mask/index"
+
+    }
+}

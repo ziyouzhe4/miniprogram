@@ -1,0 +1,14 @@
+<!--compoents/tag/index.wxml-->
+<!-- <text>compoents/tag/index.wxml</text> -->
+
+<view bindtap='onTap' class='container tag-class'>
+
+    <slot name="befote"> </slot>
+
+    <text>{{text}}</text>
+
+    <slot name="after"> </slot>
+
+    <!-- slot 插槽 -->
+
+</view>

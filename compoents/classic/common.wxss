@@ -1,0 +1,29 @@
+.classic-container{
+
+  display: flex;
+  flex-direction: column;
+  /*  交叉轴 */
+  align-items: center;
+  width: 100%;
+
+}
+
+.image{
+  /* width: 750rpx; */
+  width: 100%;
+  height: 500rpx;
+  /* mode:aspectFit; */
+}
+
+.tag{
+  width: 46rpx;
+  height: 142.rpx;
+  position: relative;
+  right: 310rpx;
+  bottom: 58rpx;
+}
+
+.content{
+  font-size: 36rpx;
+  max-width: 550rpx;
+}

@@ -1,0 +1,165 @@
+<wxs src="../../util/filter.wxs" module="util" />
+
+<view class='container'>
+
+    <view class='head'>
+
+        <image src="{{detail.image}}"></image>
+
+        <text class="title">{{detail.title}}</text>
+
+        <text class='author'>{{detail.author}}</text>
+
+    </view>
+
+
+    <view class='sub-container'>
+
+        <text class='headline'>短评</text>
+        <text class='shadow' wx:if="{{comments==false}}">还没有短评</text>
+
+        <view class='comment-container'>
+
+            <block wx:for="{{util.limit(comments,15)}}" wx:key="{{id}}">
+
+                <p-tag tag-class="{{util.hightlight(index)}}" text="{{item.content}}">
+
+                    <!-- <text class='num' slot="after">{{'+'+ item.nums}}</text> -->
+
+                    <text class='num' slot="after">{{'+'+ item.nums}}</text>
+
+                </p-tag>
+
+
+            </block>
+
+        </view>
+    </view>
+
+    <view class='sub-container'>
+
+        <text class='headline'>内容简介</text>
+
+        <text class='summary' decode='true'>{{util.format(detail.summary)}}</text>
+
+
+    </view>
+
+
+    <view class='sub-container'>
+
+        <text class='headline'>书本信息</text>
+
+        <view class='detail-container'>
+
+
+            <view class='vertical description'>
+
+                <text>出版史</text>
+                <text>出版年</text>
+                <text>页数</text>
+                <text>定价</text>
+                <text>装帧</text>
+
+            </view>
+
+            <view class='vertical'>
+
+                <text>{{detail.publisher}}</text>
+                <text>{{detail.pubdate}}</text>
+                <text>{{detail.pages}}</text>
+                <text>{{detail.price}}</text>
+                <text>{{detail.binding}}</text>
+
+            </view>
+
+        </view>
+
+    </view>
+
+
+</view>
+
+<view class='post-container' wx:if="{{!posting}}">
+
+    <view bind:tap="onFakePost" class='post-fake'>
+
+        <text>请输入短评</text>
+
+    </view>
+
+    <view class='like-container'>
+
+        <p-like class='like' bind:like="onlike" like="{{likeStatus}}" count="{{likeCount}}" />
+
+    </view>
+
+
+</view>
+
+
+<view class='posting-container' wx:if="{{posting}}">
+
+    <view class='post-header'>
+
+        <text wx:if="{{!(comments==false)}}">仅可点击标签+1</text>
+        <text wx:else>暂无短评</text>
+        <text bindtap='onCancel' class='cancel'>取消</text>
+
+    </view>
+
+    <view class='comment-container'>
+
+        <block wx:for="{{util.limit(comments, 3)}}" wx:key="">
+            <p-tag bind:tapping="onPost" tag-class="tag" text="{{item.content}}">
+                <text class="num" slot="after">{{'+' + item.nums}}</text>
+            </p-tag>
+        </block>
+    </view>
+
+
+
+
+    <input bindconfirm='confirm' class='post' placeholder='短评最多12个字'></input>
+
+
+
+</view>
+
+
+<p-mask wx:if="{{posting}}"/>
+
+
+<wxs module="util">
+    var limit = function(array, length) {
+        return array.slice(0, length)
+    }
+    var format = function(text) {
+        if (!text) {
+            return
+        }
+        var reg = getRegExp('\\\\n', 'g')
+        var text = text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+        return text
+    }
+
+
+    var hightlight = function(index) {
+        if (index == 0) {
+            return 'ext-tag-class1'
+        } else if (index == 1) {
+            return 'ext-tag-class2'
+        }
+        return ''
+
+    }
+
+
+
+
+    module.exports = {
+        limit: limit,
+        format: format,
+        hightlight:hightlight
+    }
+</wxs>

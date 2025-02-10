@@ -1,0 +1,23 @@
+/* compoents/like/index.wxss */
+.container{
+  /* background-color: #999999;  inline-flex 自适应宽度*/
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10rpx;
+}
+
+.container image{
+  width:32rpx;
+  height:28rpx;
+}
+
+.container text{
+  /* font-size:48rpx; 使用了全局样式，app.wxss中*/
+  color:#bbbbbb;
+  position: relative;
+  bottom: 10rpx;
+  left: 6rpx;
+  /* 设置line-height 不让空间上下有多余的间隙， */
+  line-height: 24rpx;
+  /* font-family: "PingFangSC-Thin";  使用了全局样式，app.wxss中*/
+}

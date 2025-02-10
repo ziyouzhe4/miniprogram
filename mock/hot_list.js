@@ -1,0 +1,45 @@
+module.exports = {
+  // 这里放置你的 JSON 数据
+  "data":[{
+    "author":"jack",
+		"title":"爱听",
+    "fav_nums":1000,
+    "image":"http://gips3.baidu.com/it/u=1821127123,1149655687&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280"
+	},
+	{
+		"author":"majianjie",
+		"title":"爱读",
+    "fav_nums":2,
+    "image":"http://gips3.baidu.com/it/u=100751361,1567855012&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280"
+  },
+  {
+		"author":"rose",
+		"title":"爱看",
+    "fav_nums":19,
+    "image":"http://gips1.baidu.com/it/u=3874647369,3220417986&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280"
+	},
+  {
+		"author":"ruby",
+		"title":"军事",
+    "fav_nums":28,
+    "image":"http://gips0.baidu.com/it/u=3822353666,2757632348&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280"
+	},
+  {
+		"author":"paul",
+		"title":"学会表达",
+    "fav_nums":133,
+    "image":"http://gips3.baidu.com/it/u=100751361,1567855012&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280"
+	},
+  {
+		"author":"kobe",
+		"title":"学会反驳",
+    "fav_nums":0,
+    "image":"http://gips3.baidu.com/it/u=1821127123,1149655687&fm=3028&app=3028&f=JPEG&fmt=auto?w=720&h=1280"
+	},
+  {
+		"author":"james",
+		"title":"理论知识",
+    "fav_nums":99,
+    "image":"http://gips3.baidu.com/it/u=70459541,3412285454&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280"
+	}]
+};

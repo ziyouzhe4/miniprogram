@@ -1,0 +1,11 @@
+<!--compoents/loading/index.wxml-->
+<!-- <text>compoents/loading/index.wxml</text> -->
+
+<view class="spinner">
+
+
+    <view class='double-bounce1'></view>
+
+    <view class='double-bounce2'></view>
+
+</view>

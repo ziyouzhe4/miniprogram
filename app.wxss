@@ -1,0 +1,35 @@
+page {
+    font-family: "PingFangSC-Thin";
+    font-size: 24rpx;
+}
+
+button.btn-clear {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    font-size: 18rpx;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    color: #333;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+}
+
+button.btn-clear::after {
+    border: none;
+    border-radius: 0;
+}
+
+button.btn-clear[disabled] {
+    background-color: transparent;
+}

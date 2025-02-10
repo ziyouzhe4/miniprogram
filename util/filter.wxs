@@ -1,0 +1,14 @@
+var format1 = function(text) {
+    
+    if (!text) {
+        return
+    }
+    // log.info('正则表达式处理前的字符串:'+text)
+    // wxs
+    var reg = getRegExp('\\\\n', 'g')
+    return text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+}
+
+module.exports = {
+    format: format1
+}

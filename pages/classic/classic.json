@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "p-like":"/compoents/like/index",
+    "p-movie":"/compoents/classic/movie/index",
+    "p-music": "/compoents/classic/music/index",
+    "p-essay": "/compoents/classic/essay/index",
+    "p-epsoide":"/compoents/epsoide/index",
+    "p-nav": "/compoents/nav/index",
+    "p-button":"/compoents/image-button/index"
+  }
+}

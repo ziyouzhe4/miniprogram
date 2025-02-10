@@ -1,0 +1,25 @@
+<view class='container'>
+
+    <view class='header'>
+
+        <p-epsoide class='epsoide' index="{{classicData.index}}" />
+
+        <view class='like-container'>
+            <p-like class='like' bind:like="onlike" like="{{likeStatus}}" count="{{likeCount}}" />
+
+            <p-button class='share-btn' open-type='share'>
+                <image class='share' slot="img" src='/images/icon/share.png'></image>
+            </p-button>
+
+        </view>
+    </view>
+
+    <p-movie hidden="{{classicData.type!=100}}" class='movie' img="{{classicData.image}}" content="{{classicData.content}}" />
+
+    <p-music wx:if="{{classicData.type==200}}" class='movie' img="{{classicData.image}}" content="{{classicData.content}}" src="{{classicData.url}}" />
+
+    <p-essay hidden="{{classicData.type!=300}}" class='movie' img="{{classicData.image}}" content="{{classicData.content}}" />
+
+    <p-nav bind:left="onNext" bind:right="onPrevious" class='nav' title="{{classicData.title}}" first="{{first}}" latest="{{latest}}" />
+
+</view>

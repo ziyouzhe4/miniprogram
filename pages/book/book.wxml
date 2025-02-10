@@ -1,0 +1,25 @@
+<!-- 列表渲染 -->
+<!-- <p-book wx:for="{{books}}" book="{{item}}"/> -->
+
+<view wx:if="{{!searching}}"class='container'>
+
+    <view class='header'>
+        <view class='box' bindtap='onSearching'>
+            <image src='/images/icon/search.png'></image>
+            <text>搜索书籍</text>
+        </view>
+    </view>
+
+    <view class='sub-container'>
+        <image class='header-img' src="/images/book/quality.png"></image>
+        <view class='books-container'>
+            <block wx:for="{{books}}" wx:key="id">
+                <p-book class="p-book" book="{{item}}" />
+            </block>
+            <!-- wx:key object 不重复 数组或者字符串 -->
+        </view>
+    </view>
+
+</view>
+
+<p-search more="{{more}}" wx:if="{{searching}}" bind:cancel="onCancel" />

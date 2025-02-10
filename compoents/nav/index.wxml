@@ -1,0 +1,13 @@
+<!--compoents/nav/index.wxml-->
+
+<view class='container'>
+<!-- 找最新的期刊 -->
+    <image bind:tap="onLeft" class='icon' src="{{latest?disLeftSrc:leftSrc}}" />
+
+    <text class='title'>{{title}}</text>
+    
+<!-- 向右找最早的期刊 -->
+    <image bind:tap="onRight" class='icon' src="{{first?disRightSrc:rightSrc}}" />
+
+
+</view>
