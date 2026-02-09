@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "countdown": "/compoents/countdown/index"
+  },
+  "navigationBarTitleText": "倒计时组件测试"
+}
