@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/countdown-test/countdown-test",
         "pages/classic/classic",
         "pages/book/book",
         "pages/book-detail/book-detail",

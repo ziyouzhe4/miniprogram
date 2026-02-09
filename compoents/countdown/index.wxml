@@ -1,0 +1,29 @@
+<!--compoents/countdown/index.wxml-->
+<view class="countdown-container">
+  <!-- 前缀文本 -->
+  <text wx:if="{{showPrefix}}" class="text-label prefix-label">{{prefixText}}</text>
+  
+  <!-- 天数标签（自适应宽度） -->
+  <view class="time-label day-label">{{days}}</view>
+  
+  <!-- 天的后缀文本 -->
+  <text wx:if="{{showDaySuffix}}" class="text-label day-suffix-label">{{daySuffixText}}</text>
+  
+  <!-- 小时标签 -->
+  <view class="time-label">{{hours < 10 ? '0' + hours : hours}}</view>
+  
+  <!-- 圆形分隔符 1 (替代冒号) -->
+  <view class="circular-separator"></view>
+  
+  <!-- 分钟标签 -->
+  <view class="time-label">{{minutes < 10 ? '0' + minutes : minutes}}</view>
+  
+  <!-- 圆形分隔符 2 (替代冒号) -->
+  <view class="circular-separator"></view>
+  
+  <!-- 秒标签 -->
+  <view class="time-label">{{seconds < 10 ? '0' + seconds : seconds}}</view>
+  
+  <!-- 末尾文案标签 -->
+  <text wx:if="{{showFinalSuffix}}" class="text-label final-suffix-label">{{finalSuffixText}}</text>
+</view>

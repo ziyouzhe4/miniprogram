@@ -1,0 +1,39 @@
+<!--pages/countdown-test/countdown-test.wxml-->
+<view class="container">
+  <view class="title">倒计时组件（圆形分隔符）</view>
+  
+  <view class="section">
+    <view class="section-title">示例1：带前缀和后缀</view>
+    <countdown 
+      endTimestamp="{{endTimestamp}}" 
+      offset="{{offset}}"
+      placeholder="{{placeholder}}"
+      bind:timeup="onTimeUp">
+    </countdown>
+  </view>
+
+  <view class="section">
+    <view class="section-title">示例2：简单格式</view>
+    <countdown 
+      endTimestamp="{{endTimestamp}}" 
+      offset="{{offset}}"
+      placeholder="{day} {hh_mm_ss}">
+    </countdown>
+  </view>
+
+  <view class="section">
+    <view class="section-title">示例3：只有时分秒</view>
+    <countdown 
+      endTimestamp="{{endTimestamp}}" 
+      offset="{{offset}}"
+      placeholder="{hh_mm_ss}">
+    </countdown>
+  </view>
+
+  <view class="note">
+    <text class="note-title">说明：</text>
+    <text>• 圆形分隔符尺寸：6x6px（圆形）</text>
+    <text>• 替代了原来的冒号":"文本</text>
+    <text>• 时/分/秒之间使用圆形分隔符</text>
+  </view>
+</view>
